@@ -1,0 +1,27 @@
+# Build directories
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Qt Creator
+*.user
+*.pro.user*
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.exe
+*.out
