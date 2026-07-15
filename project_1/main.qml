@@ -24,7 +24,6 @@ Window {
                 }
 
                 TextField {
-                    id: reference
                     placeholderText: qsTr("Enter first name")
                 }
             }
