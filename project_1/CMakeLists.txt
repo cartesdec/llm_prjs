@@ -12,6 +12,8 @@ find_package(Qt6 COMPONENTS Core Gui Qml Quick REQUIRED)
 
 add_executable(project_1
     main.cpp
+    person.h
+    person.cpp
     resources.qrc
 )
 
