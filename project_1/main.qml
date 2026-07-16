@@ -58,6 +58,62 @@ Window {
             }
         }
 
+        RowLayout {
+            spacing: 20
+
+            ColumnLayout {
+                spacing: 5
+
+                Text {
+                    text: qsTr("street address")
+                }
+
+                TextField {
+                    placeholderText: qsTr("Enter street address")
+                }
+            }
+
+            ColumnLayout {
+                spacing: 5
+
+                Text {
+                    text: qsTr("city")
+                }
+
+                TextField {
+                    placeholderText: qsTr("Enter city")
+                }
+            }
+
+            ColumnLayout {
+                spacing: 5
+
+                Text {
+                    text: qsTr("postal code")
+                }
+
+                TextField {
+                    placeholderText: qsTr("Enter postal code")
+                }
+            }
+
+            ColumnLayout {
+                spacing: 5
+
+                Text {
+                    text: qsTr("country")
+                }
+
+                TextField {
+                    placeholderText: qsTr("Enter country")
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+        }
+
         Item {
             Layout.fillHeight: true
         }
