@@ -54,7 +54,17 @@ Window {
                 }
 
                 ComboBox {
+                    id: roleComboBox
                     model: ["admin", "user", "guest"]
+                    currentIndex: model.indexOf(customer.role)
+                    onCurrentIndexChanged: {
+                        if (model[currentIndex] !== customer.role) {
+                            customer.role = model[currentIndex]
+                        }
+                    }
+                    Component.onCompleted: {
+                        currentIndex = model.indexOf(customer.role)
+                    }
                 }
             }
 
