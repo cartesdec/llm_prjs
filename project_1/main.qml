@@ -24,8 +24,10 @@ Window {
                 }
 
                 TextField {
-                    id: reference
+                    id: firstNameField
                     placeholderText: qsTr("Enter first name")
+                    text: customer.firstname
+                    onTextChanged: customer.firstname = text
                 }
             }
 
@@ -37,7 +39,10 @@ Window {
                 }
 
                 TextField {
+                    id: surnameField
                     placeholderText: qsTr("Enter surname")
+                    text: customer.surname
+                    onTextChanged: customer.surname = text
                 }
             }
 
