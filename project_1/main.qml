@@ -24,6 +24,7 @@ Window {
                 }
 
                 TextField {
+                    id: reference
                     placeholderText: qsTr("Enter first name")
                 }
             }
@@ -37,6 +38,18 @@ Window {
 
                 TextField {
                     placeholderText: qsTr("Enter surname")
+                }
+            }
+
+            ColumnLayout {
+                spacing: 5
+
+                Text {
+                    text: qsTr("role")
+                }
+
+                ComboBox {
+                    model: ["admin", "user", "guest"]
                 }
             }
 
