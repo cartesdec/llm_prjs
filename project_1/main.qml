@@ -84,7 +84,10 @@ Window {
                 }
 
                 TextField {
+                    id: streetAddressField
                     placeholderText: qsTr("Enter street address")
+                    text: customer.streetAddress
+                    onTextChanged: customer.streetAddress = text
                 }
             }
 
@@ -96,7 +99,10 @@ Window {
                 }
 
                 TextField {
+                    id: cityField
                     placeholderText: qsTr("Enter city")
+                    text: customer.city
+                    onTextChanged: customer.city = text
                 }
             }
 
@@ -108,7 +114,10 @@ Window {
                 }
 
                 TextField {
+                    id: postalCodeField
                     placeholderText: qsTr("Enter postal code")
+                    text: customer.postalCode
+                    onTextChanged: customer.postalCode = text
                 }
             }
 
@@ -120,6 +129,7 @@ Window {
                 }
 
                 ComboBox {
+                    id: countryComboBox
                     model: [
                         "Austria",
                         "Belgium",
@@ -149,6 +159,15 @@ Window {
                         "Spain",
                         "Sweden"
                     ]
+                    currentIndex: model.indexOf(customer.country)
+                    onCurrentIndexChanged: {
+                        if (model[currentIndex] !== customer.country) {
+                            customer.country = model[currentIndex]
+                        }
+                    }
+                    Component.onCompleted: {
+                        currentIndex = model.indexOf(customer.country)
+                    }
                 }
             }
 
