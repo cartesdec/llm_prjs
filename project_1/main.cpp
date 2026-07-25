@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "person.h"
+#include "variousmodels.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,8 +13,14 @@ int main(int argc, char *argv[])
     // Create Person instance
     Person customer;
     
+    // Create VariousModels instance
+    VariousModels variousModels;
+    
     // Export customer object to QML context
     engine.rootContext()->setContextProperty("customer", &customer);
+    
+    // Export variousModels object to QML context
+    engine.rootContext()->setContextProperty("variousModels", &variousModels);
     
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
